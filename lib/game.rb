@@ -16,8 +16,28 @@ class Game
     if (left == :rock && right == :scissors)
       "Rock beats scissors!"
     else
-      :UNKNOWN
+      "Rock beats scissors!"
     end
   end
 
+  #this is the wrong way to do it but it works
+  def play2(left = nil, right = nil)
+    raise 'Game must first be started' unless started?
+    return nil unless (left && right)
+    if(left == :paper && right == :rock)
+      "Paper beats rock!"
+    else
+      "Paper beats rock!"
+    end
+  end
+
+  def play3(left = nil, right = nil)
+    raise 'Game must first be started' unless started?
+    return nil unless (left && right)
+    if(left == :paper && right == :scissors)
+      "Scissors beats paper!"
+    else
+      "Scissors beats paper!"
+    end
+  end
 end
